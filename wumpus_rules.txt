@@ -1,0 +1,86 @@
+#stench and wumpus:
+(iff S_1_2 (xor M_1_3 M_2_2))
+(iff S_1_3 (xor M_1_4 M_2_3))
+(iff S_1_4 (xor M_1_3 M_2_4))
+
+(iff S_2_1 (xor M_2_2 M_3_2))
+(iff S_2_2 (xor M_2_3 M_3_2))
+(iff S_2_3 (xor M_1_3 M_2_4 M_3_3 M_2_2))
+(iff S_2_4 (xor M_1_4 M_2_3 M_3_4))
+
+(iff S_3_1 (xor M_2_1 M_3_2 M_4_1))
+(iff S_3_2 (xor M_4_3 M_3_3 M_4_2 M_3_1))
+(iff S_3_3 (xor M_2_3 M_3_4 M_4_3 M_3_2))
+(iff S_3_4 (xor M_2_4 M_3_3 M_4_4))
+
+(iff S_4_1 (xor M_4_2 M_3_1))
+
+#wumpus and stench:
+(iff M_1_3 (and S_1_2 S_1_4 S_2_3))
+(iff M_1_4 (and S_1_3 S_2_4))
+
+(iff M_2_3 (and S_1_3 S_2_2 S_2_4 S_3_3))
+(iff M_2_4 (and S_1_4 S_2_3 S_3_4))
+
+(iff M_3_1 (and S_2_1 S_3_2 S_4_1))
+(iff M_3_2 (and S_2_2 S_3_1 S_3_3 S_4_2))
+(iff M_3_3 (and S_2_3 S_3_2 S_3_4 S_4_3))
+(iff M_3_4 (and S_2_4 S_3_3 S_4_4))
+
+(iff M_4_1 (and S_3_1 S_4_2))
+(iff M_4_2 (and S_3_2 S_4_1 S_4_3))
+(iff M_4_3 (and S_3_3 S_4_2 S_4_4))
+(iff M_4_4 (and S_3_4 S_4_3))
+
+#breeze and pit:
+(iff B_1_2 (or P_1_3 P_2_2))
+(iff B_1_3 (or P_1_4 P_2_3))
+(iff B_1_4 (or P_1_3 P_2_4))
+
+(iff B_2_1 (or P_2_2 P_3_2))
+(iff B_2_2 (or P_2_3 P_3_2))
+(iff B_2_3 (or P_1_3 P_2_4 P_3_3 P_2_2))
+(iff B_2_4 (or P_1_4 P_2_3 P_3_4))
+
+(iff B_3_1 (or P_2_1 P_3_2 P_4_1))
+(iff B_3_2 (or P_4_3 P_3_3 P_4_2 P_3_1))
+(iff B_3_3 (or P_2_3 P_3_4 P_4_3 P_3_2))
+(iff B_3_4 (or P_2_4 P_3_3 P_4_4))
+
+(iff B_4_1 (or P_4_2 P_3_1))
+
+#pit and breeze:
+(iff P_1_3 (and B_1_2 B_1_4 B_2_3))
+(iff P_1_4 (and B_1_3 B_2_4))
+
+(iff P_2_3 (and B_1_3 B_2_2 B_2_4 B_3_3))
+(iff P_2_4 (and B_1_4 B_2_3 B_3_4))
+
+(iff P_3_1 (and B_2_1 B_3_2 B_4_1))
+(iff P_3_2 (and B_2_2 B_3_1 B_3_3 B_4_2))
+(iff P_3_3 (and B_2_3 B_3_2 B_3_4 B_4_3))
+(iff P_3_4 (and B_2_4 B_3_3 B_4_4))
+
+(iff P_4_1 (and B_3_1 B_4_2))
+(iff P_4_2 (and B_3_2 B_4_1 B_4_3))
+(iff P_4_3 (and B_3_3 B_4_2 B_4_4))
+(iff P_4_4 (and B_3_4 B_4_3))
+
+#one and only wumpus:
+(xor M_1_3 M_1_4 M_2_3 M_2_4 M_3_1 M_3_2 M_3_3 M_3_4 M_4_1 M_4_2 M_4_3 M_4_4)
+
+#squares with no monsters and pits:
+(not M_1_1)
+(not M_1_2)
+(not M_2_1)
+(not M_2_2)
+
+(not P_1_1)
+(not P_1_2)
+(not P_2_1)
+(not P_2_2)
+
+#min one safe square to explore:
+(not (and P_1_3 P_1_4 P_2_3 P_2_4 P_3_1 P_3_2 P_3_3 P_3_4 P_4_1 P_4_2 P_4_3 P_4_4))
+
+(xor P_1_3 P_1_4 P_2_4 P_3_1 P_3_2 P_3_3 P_3_4 P_4_1 P_4_2 P_4_3 P_4_4)
