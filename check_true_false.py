@@ -1,9 +1,13 @@
 #!/usr/bin/env python
+
+
 """ 
+CSCI-404A
 Deepak Rajasekhar Karishetti
-10846936
-CSCI-404
+CSM
 """
+
+
 #-------------------------------------------------------------------------------
 # Name:        check_true_false
 # Purpose:     Main entry into logic program. Reads input files, creates 
