@@ -1,8 +1,9 @@
 #!/usr/bin/env python
+
 """ 
+CSCI-404A
 Deepak Rajasekhar Karishetti
-10846936
-CSCI-404
+CSM
 """
 #-------------------------------------------------------------------------------
 # Name:        logical_expression
