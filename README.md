@@ -1,17 +1,17 @@
-Readme file.
+## Wumpus world
 
-(1) Name and CSM ID of the student.
+**Name and CSM ID of the student**
 
 	Name: Deepak Rajsekhar Karishetti
 	CWID: 
 	
 
-(2) What programming language is used.
+**What programming language is used**
 
-	Python
+	Python3
 
 
-(3) How the code is structured.
+**How the code is structured**
 
 	- The code is developed on Vim editor and on Linux.(Ubuntu 16.04 LTS OS)
 
@@ -23,13 +23,13 @@ Readme file.
 	- Checking if the knowledge base entails the given statement which gives the output in the form of a 'result.txt' file.
 	
 
-(4) How to run the code, including very specific compilation instructions, if compilation is needed. Instructions such as "compile using g++" are NOT considered specific.
+**How to run the code**
 
 	To run on Linux:
 
 	>A terminal is opened at the file path and the following command is typed to run the program:
 
-	$python check_true_false.py wumpus_rules.txt a.txt b.txt 
+	$ python check_true_false.py wumpus_rules.txt a.txt b.txt 
 
 
 
@@ -37,7 +37,7 @@ Readme file.
 
 	> Open a terminal and navigate to the folder path containing all the files enclosed along and type the following command to run the program:
 
-	check_true_false.py wumpus_rules.txt a.txt b.txt
+	$ check_true_false.py wumpus_rules.txt a.txt b.txt
 
 >> The result.txt file generated in the same folder.
 
